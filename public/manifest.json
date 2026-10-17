@@ -1,0 +1,17 @@
+{
+  "name": "UMCO House — Sistem Informasi & POS",
+  "short_name": "UMCO House",
+  "description": "Sistem Informasi Kasir, Produksi Realtime, dan Inventori UMCO House BUMK UMRI",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F9F9F8",
+  "theme_color": "#0E7044",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

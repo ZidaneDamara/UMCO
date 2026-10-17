@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --color-brand-50: #EEF7F1;
+    --color-brand-100: #D6ECDD;
+    --color-brand-600: #1F7A4D;
+    --color-brand-700: #17613D;
+    --color-brand-900: #0F3D27;
+    --color-app-bg: #F7F8F7;
+    --color-app-surface: #FFFFFF;
+    --color-app-line: #E5E8E6;
+    --color-app-ink: #18211C;
+    --color-app-ink-muted: #5F6B64;
+    --color-app-warning: #B7791F;
+    --color-app-danger: #C2412D;
+    --color-app-info: #2B6CB0;
+}
+
+:root {
+    --color-brand-50: #EEF7F1;
+    --color-brand-100: #D6ECDD;
+    --color-brand-600: #1F7A4D;
+    --color-brand-700: #17613D;
+    --color-brand-900: #0F3D27;
+    --color-bg: #F7F8F7;
+    --color-surface: #FFFFFF;
+    --color-line: #E5E8E6;
+    --color-ink: #18211C;
+    --color-ink-muted: #5F6B64;
+    --color-warning: #B7791F;
+    --color-danger: #C2412D;
+    --color-info: #2B6CB0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+}
+
+.tabular-nums {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Print Thermal Receipt (58mm / 80mm) */
+@media print {
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+    
+    body * {
+        visibility: hidden !important;
+    }
+    
+    #printable-receipt,
+    #printable-receipt * {
+        visibility: visible !important;
+    }
+    
+    #printable-receipt {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 80mm;
+        margin: 0;
+        padding: 2mm 4mm;
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 11px;
+        line-height: 1.25;
+        box-shadow: none !important;
+        border: none !important;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+}
